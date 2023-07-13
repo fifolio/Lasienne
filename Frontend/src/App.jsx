@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider, Outlet} from 'react-router-dom'; 
 import {HomePage, ProductPage, ProductsPage} from './pages'
 import { Navbar, Footer } from './components';
+import "./App.scss"
 
 const Layout = () => {
   return (
