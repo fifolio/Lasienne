@@ -26,13 +26,16 @@ export default function Footer() {
                 </div>
                 <div className="item">
                     <h1>Contact</h1>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae omnis dolorem, officia ducimus perferendis laboriosam eum similique dicta, perspiciatis inventore quis aut. 
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae omnis dolorem, officia ducimus perferendis laboriosam eum similique dicta, perspiciatis inventore quis aut.
                 </div>
             </div>
             <div className="bottom">
                 <div className="left">
-                    <span className="logo">Crystals</span>
-                    <span className="copyright">&copy; {new Date().getFullYear()}. All Rights Reserved</span>
+                    <span className="logo">
+                        <img src="/icon.png" width="20px" style={{ marginRight: '6px', marginBottom: '-3px' }} />
+                        Crystals
+                    </span>
+                    <span className="copyright">&copy; {new Date().getFullYear()} All Rights Reserved</span>
                 </div>
                 <div className="right">
                     <img src="/img/payment.png" />

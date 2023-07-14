@@ -30,7 +30,10 @@ export default function Navbar() {
                     </div>
                 </div>
                 <div className="center">
-                    <Link className="link" to="/">CRYSTALS</Link>
+                    <Link className="link" to="/">
+                        <img src="/icon.png" width="25px" style={{marginRight: '6px', marginBottom: '-5px'}} />
+                        CRYSTALS
+                        </Link>
                 </div>
                 <div className="right">
                       <div className="item">

@@ -2,9 +2,8 @@ import {Home} from '../../components/index'
 
 export default function HomePage(){
     return (
-        <>
-        Welcome to Home Page.
+        <div className="homePage">
         <Home />
-        </>
+        </div>
     )
 }

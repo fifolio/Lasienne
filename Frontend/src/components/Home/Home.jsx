@@ -1,7 +1,9 @@
-export default function Home(){
+import Slider from "../Slider/Slider";
+
+export default function Home() {
     return (
-        <>
-        Home Comp
-        </>
+        <div className="home">
+            <Slider />
+        </div>
     )
 }
