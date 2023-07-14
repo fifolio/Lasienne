@@ -1,9 +1,10 @@
 .navbar {
-    height: 80px;
-    font-size: 15px;
-
+    height: 55px;
+    font-size: 18px;
+    font-weight: 500;
+    
     .wrapper {
-        padding: 25px 30px;
+        padding: 13px 30px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -21,9 +22,11 @@
     }
 
     .center {
+        font-weight: bolder;
         font-size: 22.5px;
         letter-spacing: 2px;
-    }
+        text-shadow: 1.9px 1.9px 1px rgb(202, 202, 202);
+        }
 
     .right{
         display: flex;
@@ -44,14 +47,16 @@
                 span{
                     font-size: 15px;
                     font-weight: bold;
-                    height: 20px;
-                    width: 20px;
-                    border-radius: 50%;
+                    height: max-content;
+                    width: max-content;
+                    border-radius: 25px;
                     background-color: #2879fe;
                     color: white;
                     position: absolute;
-                    right: -10px;
-                    top: -10px;
+                    right: -15px;
+                    top: -5px;
+                    letter-spacing: 1px;
+                    padding: 2px 5px 3px 5px;
                     display: flex;
                     align-items: center; // center vertically
                     justify-content: center; // center horizontally
