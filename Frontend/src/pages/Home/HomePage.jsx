@@ -1,9 +1,9 @@
-import {Home} from '../../components/index'
+import { Home } from '../../components/index'
 
-export default function HomePage(){
+export default function HomePage() {
     return (
         <div className="homePage">
-        <Home />
+            <Home />
         </div>
     )
 }
