@@ -1,26 +1,32 @@
+/* eslint-disable react/prop-types */
 import Card from "../Card/Card";
 import "./FeaturedProducts.scss"
 
 export default function FeaturedProducts({ type }) {
-
+    
     const data = [
         {
             id: 1,
             img: 'https://placeholder.co/250',
+            img2: 'https://placeholder.co/251',
             title: 'Title here',
+            isNew: true,
             oldPrice: 32,
             price: 12
         },
         {
             id: 2,
             img: 'https://placeholder.co/250',
+            img2: 'https://placeholder.co/251',
             title: 'Title here',
+            isNew: true,
             oldPrice: 32,
             price: 12
         },
         {
             id: 3,
             img: 'https://placeholder.co/250',
+            img2: 'https://placeholder.co/251',
             title: 'Title here',
             oldPrice: 32,
             price: 12
@@ -28,6 +34,7 @@ export default function FeaturedProducts({ type }) {
         {
             id: 4,
             img: 'https://placeholder.co/250',
+            img2: 'https://placeholder.co/251',
             title: 'Title here',
             oldPrice: 32,
             price: 12
