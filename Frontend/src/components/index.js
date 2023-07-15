@@ -8,3 +8,5 @@ export {default as FeaturedProducts} from './FeaturedProducts/FeaturedProducts.j
 export {default as Card} from './Card/Card.jsx';
 export {default as Categories} from './Categories/Categories.jsx';
 export {default as Contact} from './Contact/Contact.jsx';
+export {default as List} from './List/List.jsx';
+
