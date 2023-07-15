@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import "./Card.scss";
 
 export default function Card({ item }) {
@@ -8,7 +8,7 @@ export default function Card({ item }) {
         <Link className='link' to={`/product/${item.id}`}>
             <div className="card">
                 <div className="image">
-                {item.isNew && <span>New Season</span>}
+                    {item.isNew && <span>New Season</span>}
                     <img src={item.img} className='mainImg' />
                     <img src={item.img2} className='secondImg' />
                 </div>
