@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import "./Footer.scss";
 
 export default function Footer() {
@@ -35,7 +36,7 @@ export default function Footer() {
                         <img src="/icon.png" width="20px" style={{ marginRight: '6px', marginBottom: '-3px' }} />
                         Crystals
                     </span>
-                    <span className="copyright">&copy; {new Date().getFullYear()} All Rights Reserved</span>
+                    <span className="copyright">&copy; {new Date().getFullYear()} Made with ❤ by <a href="https://github.com/fifolio" target="_blank">fifolio</a></span>
                 </div>
                 <div className="right">
                     <img src="/img/payment.png" />

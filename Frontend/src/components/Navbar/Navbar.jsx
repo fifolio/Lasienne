@@ -37,7 +37,7 @@ export default function Navbar() {
                 </div>
                 <div className="right">
                       <div className="item">
-                        <Link className="link" to="/">Github</Link>
+                        <Link className="link" to="https://github.com/fifolio" target='_blank'>Github</Link>
                     </div>
                     <div className="item">
                         <Link className="link" to="/">About</Link>
