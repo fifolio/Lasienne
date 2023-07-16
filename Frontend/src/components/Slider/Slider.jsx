@@ -26,9 +26,9 @@ export default function Slider() {
         setCurrentSlide(currentSlide === 4 ? 0 : currentSlide + 1);
     };
 
-    setInterval(() => {
-        nextSlide()
-    }, 5500);
+    // setInterval(() => {
+    //     nextSlide()
+    // }, 5500);
 
     return (
         <div className="slider">

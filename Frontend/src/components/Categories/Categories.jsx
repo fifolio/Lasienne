@@ -7,23 +7,29 @@ export default function Categories() {
             <div className="col">
                 <div className="row">
                     <img src="https://placeholder.co/800" alt="" />
-                    <button>
-                        <Link className="link" to="/products/1">Sale</Link>
-                    </button>
+                    <Link className="link" to="/products/1">
+                        <button>
+                            Sale
+                        </button>
+                    </Link>
                 </div>
                 <div className="row">
                     <img src="https://placeholder.co/800" alt="" />
-                    <button>
-                        <Link className="link" to="/products/1">Sale</Link>
-                    </button>
+                    <Link className="link" to="/products/1">
+                        <button>
+                            Sale
+                        </button>
+                    </Link>
                 </div>
             </div>
             <div className="col">
                 <div className="row">
                     <img src="https://placeholder.co/800" alt="" />
-                    <button>
-                        <Link className="link" to="/products/1">Sale</Link>
-                    </button>
+                    <Link className="link" to="/products/1">
+                        <button>
+                            Sale
+                        </button>
+                    </Link>
                 </div>
             </div>
             <div className="col col-l">
@@ -31,25 +37,31 @@ export default function Categories() {
                     <div className="col">
                         <div className="row">
                             <img src="https://placeholder.co/800" alt="" />
-                            <button>
-                                <Link className="link" to="/products/1">Sale</Link>
-                            </button>
+                            <Link className="link" to="/products/1">
+                                <button>
+                                    Sale
+                                </button>
+                            </Link>
                         </div>
                     </div>
                     <div className="col">
                         <div className="row">
                             <img src="https://placeholder.co/800" alt="" />
-                            <button>
-                                <Link className="link" to="/products/1">Sale</Link>
-                            </button>
+                            <Link className="link" to="/products/1">
+                                <button>
+                                    Sale
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
                 <div className="row">
                     <img src="https://placeholder.co/800" alt="" />
-                    <button>
-                        <Link className="link" to="/products/1">Sale</Link>
-                    </button>
+                    <Link className="link" to="/products/1">
+                        <button>
+                            Sale
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>

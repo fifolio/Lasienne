@@ -6,7 +6,7 @@ import Slider from "../Slider/Slider";
 export default function Home() {
     return (
         <div className="home">
-            {/* <Slider /> */}
+            <Slider />
             <FeaturedProducts type="featured" />
             <Categories />
             <FeaturedProducts type="trending" />
