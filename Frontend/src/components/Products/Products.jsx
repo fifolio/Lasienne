@@ -28,9 +28,9 @@ export default function Products() {
                     </div>
                     <h2>Filter by price</h2>
                     <div className="inputItem">
-                        <span>0</span>
+                        {/* <span>$0 </span> */}
                         <input type="range" min={0} max={1000} onChange={(e) => setMaxPrice(e.target.value)} />
-                        <span>{maxPrice}</span>
+                        <span> ${maxPrice}</span>
                     </div>
                     <h2>Sort by</h2>
                     <div className="inputItem">
