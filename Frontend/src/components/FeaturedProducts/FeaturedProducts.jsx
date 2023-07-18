@@ -1,46 +1,32 @@
+/* eslint-disable no-undef */
 /* eslint-disable react/prop-types */
+import {useState, useEffect} from 'react';
+import axios from 'axios';
 import Card from "../Card/Card";
-import "./FeaturedProducts.scss"
+import "./FeaturedProducts.scss";
 
 export default function FeaturedProducts({ type }) {
     
-    const data = [
-        {
-            id: 1,
-            img: 'https://placeholder.co/250',
-            img2: 'https://placeholder.co/251',
-            title: 'Title here',
-            isNew: true,
-            oldPrice: 32,
-            price: 12
-        },
-        {
-            id: 2,
-            img: 'https://placeholder.co/250',
-            img2: 'https://placeholder.co/251',
-            title: 'Title here',
-            isNew: true,
-            oldPrice: 32,
-            price: 12
-        },
-        {
-            id: 3,
-            img: 'https://placeholder.co/250',
-            img2: 'https://placeholder.co/251',
-            title: 'Title here',
-            oldPrice: 32,
-            price: 12
-        },
-        {
-            id: 4,
-            img: 'https://placeholder.co/250',
-            img2: 'https://placeholder.co/251',
-            title: 'Title here',
-            oldPrice: 32,
-            price: 12
-        },
+  const [data, setData] = useState([]);
+
+useEffect(() => {
+    const fetchData = async () => {
+        try{
+            const res = await axios.get(`${import.meta.env.VITE_API_URL}/products?populate=*`, {
+                headers: {
+                    Authorization: `Bearer ${import.meta.env.VITE_API_TOKEN}`,
+                }
+            });
+
+            setData(res.data.data)
+
+        } catch (err) {
+            console.log(err)
+        }
+    }
     
-    ];
+  fetchData();
+}, []);
 
 
 
