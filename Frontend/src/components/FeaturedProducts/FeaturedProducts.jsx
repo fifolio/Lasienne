@@ -29,7 +29,6 @@ useEffect(() => {
 }, []);
 
 
-
     return (
         <div className="featuredProducts">
             <div className="top">
