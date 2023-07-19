@@ -1,52 +1,23 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import { Card } from '..'
+import useFetch from "../hooks/useFetch";
 import "./List.scss";
 
-export default function List() {
+export default function List({ catId, subCats, maxPrice, sort }) {
 
-    const data = [
-        {
-            id: 1,
-            img: "https://placeholder.co/800",
-            img2: "https://placeholder.co/801",
-            title: "product title",
-            isNew: true,
-            oldPrice: 19,
-            price: 12,
-        },
-        {
-            id: 2,
-            img: "https://placeholder.co/800",
-            img2: "https://placeholder.co/801",
-            title: "product title",
-            isNew: true,
-            oldPrice: 19,
-            price: 12,
-        },
-        {
-            id: 3,
-            img: "https://placeholder.co/800",
-            img2: "https://placeholder.co/801",
-            title: "product title",
-            isNew: true,
-            oldPrice: 19,
-            price: 12,
-        },
-        {
-            id: 4,
-            img: "https://placeholder.co/800",
-            img2: "https://placeholder.co/801",
-            title: "product title",
-            isNew: true,
-            oldPrice: 19,
-            price: 12,
-        },
-    ]
+    const { data, loading, error } = useFetch(`/products?populate=*&[filters][categories][id]=${catId}${subCats.map((item) => `&[filters][sub_categories][id][$eq]=${item}`)}
+    &[filters][price][$lte]=${maxPrice}&sort=price:${sort}
+    `);
+
 
     return (
         <div className="list">
-            {data?.map((item) => (
-                <Card item={item} key={item.id} />
-            ))}
+            {loading ?
+                "loading" : 
+                data?.map((item, index) => (
+                    <Card key={index} item={item} />
+                ))}
         </div>
     )
 }
