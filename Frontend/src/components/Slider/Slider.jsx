@@ -34,9 +34,9 @@ export default function Slider() {
         <div className="slider">
             <div className="container" style={{ transform: `translateX(-${currentSlide * 100}vw)` }}>
 
-                {data?.map((img) => {
+                {data?.map((img, index) => {
                     return (
-                        <img key={img.id} src={img} />
+                        <img key={index} src={img} />
                     )
                 })}
             </div>
