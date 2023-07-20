@@ -53,7 +53,7 @@ export default function Slider() {
 
                 <div className="banner">
                     <h1>
-                        Crystal Marketplace
+                        Crystals Marketplace
                     </h1>
                     <p>
                         Beyond Classic

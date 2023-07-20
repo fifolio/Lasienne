@@ -1,6 +1,6 @@
 import { createBrowserRouter, Outlet, RouterProvider} from 'react-router-dom'; 
 import {HomePage, ProductPage, ProductsPage} from './pages'
-import { Navbar } from './components';
+import { Navbar, Footer } from './components';
 import "./App.scss"
 
 const Layout = () => {
@@ -9,7 +9,7 @@ const Layout = () => {
       <Navbar />
       <div className="div" style={{marginTop: '40px'}}></div>
       <Outlet />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   )
 }
