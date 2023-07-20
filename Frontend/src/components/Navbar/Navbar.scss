@@ -1,68 +1,103 @@
-.navbar {
-    height: 55px;
-    font-size: 14px;
-    font-weight: 500;
-    
-    .wrapper {
-        padding: 13px 30px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+.main-nav-links {
+    font-size: 12px;
+
+    .nav-link {
+        text-transform: capitalize;
+        top: 1px;
+        font-weight: 500;
     }
 
-    .item {
+    .github {
         display: flex;
+        justify-content: center;
         align-items: center;
-    }
+        text-transform: capitalize;
+        font-weight: bold;
+        margin-top: 3px;
+        color: black;
 
-    .left{
-        display: flex;
-        align-items: center;
-        gap: 25px;
-    }
-
-    .center {
-        font-weight: bolder;
-        font-size: 22.5px;
-        letter-spacing: 2px;
-        text-shadow: 1.9px 1.9px 1px rgb(202, 202, 202);
-        }
-
-    .right{
-        display: flex;
-        align-items: center;
-        gap: 25px;
-
-        .icons {
-            display: flex;
-            gap: 15px; 
-            color: #777;
-            cursor: pointer;
-
-
-            .cartIcon{
-                position: relative;
-
-                
-                span{
-                    font-size: 14px;
-                    font-weight: bold;
-                    height: max-content;
-                    width: max-content;
-                    border-radius: 25px;
-                    background-color: #2879fe;
-                    color: white;
-                    position: absolute;
-                    right: -10px;
-                    top: -5px;
-                    letter-spacing: 1px;
-                    padding: .5px 5px .5px 5px;
-                    display: flex;
-                    align-items: center; // center vertically
-                    justify-content: center; // center horizontally
-                }
-            }
-        }
     }
 
 }
+
+.cartEmpty{
+    padding: 10px;
+    font-size: 14px;
+} 
+
+
+.icons {
+    padding: 2px;
+    display: flex;
+    color: #4b4b4b;
+    cursor: pointer;
+}
+
+// .navbar {
+//     height: 55px;
+//     font-size: 14px;
+//     font-weight: 500;
+
+//     .wrapper {
+//         padding: 13px 30px;
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//     }
+
+//     .item {
+//         display: flex;
+//         align-items: center;
+//     }
+
+//     .left{
+//         display: flex;
+//         align-items: center;
+//         gap: 25px;
+//     }
+
+//     .center {
+//         font-weight: bolder;
+//         font-size: 22.5px;
+//         letter-spacing: 2px;
+//         text-shadow: 1.9px 1.9px 1px rgb(202, 202, 202);
+//         }
+
+//     .right{
+//         display: flex;
+//         align-items: center;
+//         gap: 25px;
+
+//         .icons {
+//             display: flex;
+//             gap: 15px; 
+//             color: #777;
+//             cursor: pointer;
+
+
+//             .cartIcon{
+//                 position: relative;
+
+
+//                 span{
+//                     font-size: 14px;
+//                     font-weight: bold;
+//                     height: max-content;
+//                     width: max-content;
+//                     border-radius: 25px;
+//                     background-color: #2879fe;
+//                     color: white;
+//                     position: absolute;
+//                     right: -10px;
+//                     top: -5px;
+//                     letter-spacing: 1px;
+//                     padding: .5px 5px .5px 5px;
+//                     display: flex;
+//                     align-items: center; // center vertically
+//                     justify-content: center; // center horizontally
+//                 }
+//             }
+//         }
+//     }
+
+// }

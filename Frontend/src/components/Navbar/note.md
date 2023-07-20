@@ -1,6 +1,3 @@
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
-import { useSelector } from 'react-redux';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -12,16 +9,16 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import GitHubIcon from '@mui/icons-material/GitHub';
+
+import SearchIcon from '@mui/icons-material/Search';
+import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
+import { useState } from 'react';
 import './Navbar.scss'
-import Cart from '../Cart/Cart';
 
 export default function Navbar() {
-
-    const products = useSelector((state) => state.cart.products)
-
     const [anchorElNav, setAnchorElNav] = useState(null);
     const [anchorElUser, setAnchorElUser] = useState(null);
 
@@ -41,9 +38,9 @@ export default function Navbar() {
     };
 
     return (
-        <AppBar position="fixed" style={{ background: 'white', color: 'black'}}>
+        <AppBar position="fixed" style={{ background: 'white', color: 'black' }}>
             <Container maxWidth="lg">
-                <Toolbar style={{'min-height': '50px'}}>
+                <Toolbar disableGutters>
                     <Typography
                         noWrap
                         component="a"
@@ -92,39 +89,7 @@ export default function Navbar() {
                         >
 
                             <MenuItem onClick={handleCloseNavMenu}>
-                                <Typography className="nav-link">
-                                    <Link to="/products/1" style={{ textDecoration: 'none', color: 'black' }}>
-                                        Clothing
-                                    </Link>
-                                </Typography>
-                            </MenuItem>
-                            <MenuItem onClick={handleCloseNavMenu}>
-                                <Typography className="nav-link">
-                                    <Link to="/products/2" style={{ textDecoration: 'none', color: 'black' }}>
-                                        Dresses
-                                    </Link>
-                                </Typography>
-                            </MenuItem>
-                            <MenuItem onClick={handleCloseNavMenu}>
-                                <Typography className="nav-link">
-                                    <Link to="/products/3" style={{ textDecoration: 'none', color: 'black' }}>
-                                        Sports
-                                    </Link>
-                                </Typography>
-                            </MenuItem>
-                            <MenuItem onClick={handleCloseNavMenu}>
-                                <Typography className="nav-link">
-                                    <Link to="/products/4" style={{ textDecoration: 'none', color: 'black' }}>
-                                        Accessories
-                                    </Link>
-                                </Typography>
-                            </MenuItem>
-                            <MenuItem onClick={handleCloseNavMenu} style={{ margin: '5px 0 5px 0' }}>
-                                <Typography className="nav-link">
-                                    <Link to="https://github.com/fifolio/Crystals" target="_blank" className="github" style={{ textDecoration: 'none', color: 'white', backgroundColor: 'black', padding: '10px', borderRadius: '5px' }}>
-                                        Github
-                                    </Link>
-                                </Typography>
+                                <Typography textAlign="center">something</Typography>
                             </MenuItem>
                         </Menu>
                     </Box>
@@ -149,42 +114,28 @@ export default function Navbar() {
                     </Typography>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }} className="main-nav-links">
-                        <Button sx={{ color: 'black', display: 'block' }} className="nav-link">
-                            <Link to="/products/1" style={{ textDecoration: 'none', color: 'black' }}>
-                                Clothing
-                            </Link>
-                        </Button>
-                        <Button sx={{ color: 'black', display: 'block' }} className="nav-link">
-                            <Link to="/products/2" style={{ textDecoration: 'none', color: 'black' }}>
-                                Dresses
-                            </Link>
-                        </Button>
-                        <Button sx={{ color: 'black', display: 'block' }} className="nav-link">
-                            <Link to="/products/3" style={{ textDecoration: 'none', color: 'black' }}>
-                                Sports
-                            </Link>
-                        </Button>
-                        <Button sx={{ color: 'black', display: 'block' }} className="nav-link">
-                            <Link to="/products/4" style={{ textDecoration: 'none', color: 'black' }}>
-                                Accessories
-                            </Link>
-                        </Button>
-                        <Button sx={{ color: 'black', display: 'block' }}>
-                            <Link to="https://github.com/fifolio/Crystals" target="_blank" className="github" style={{ textDecoration: 'none', color: 'black' }}>
-                                <GitHubIcon style={{ width: '19px', marginRight: '5px', marginTop: '-3px' }} />
-                                Github
-                            </Link>
-                        </Button>
+                        <Button onClick={handleCloseNavMenu} sx={{ color: 'black', display: 'block' }} className="nav-link">CLOTHING</Button>
+                        <Button onClick={handleCloseNavMenu} sx={{ color: 'black', display: 'block' }} className="nav-link">TOPS</Button>
+                        <Button onClick={handleCloseNavMenu} sx={{ color: 'black', display: 'block' }} className="nav-link">DRESSES</Button>
+                        <Button onClick={handleCloseNavMenu} sx={{ color: 'black', display: 'block' }} className="nav-link">BEACHWEAR</Button>
+                        <Button onClick={handleCloseNavMenu} sx={{ color: 'black', display: 'block' }} className="nav-link">SPORTS</Button>
+                        <Button onClick={handleCloseNavMenu} sx={{ color: 'black', display: 'block' }} className="nav-link">OUTDOORS SHOES</Button>
+                        <Button onClick={handleCloseNavMenu} sx={{ color: 'black', display: 'block' }} className="nav-link">ACCESSORIES</Button>
                     </Box>
 
+
                     <Box sx={{ flexGrow: 0 }}>
-                        <Tooltip title="Open Cart">
+                        <SearchIcon />
+                        <PersonOutlineIcon />
+                        <FavoriteBorderIcon />
+                        <Tooltip title="Open settings">
                             <IconButton onClick={handleOpenUserMenu}>
                                 <div className="icons">
-                                    <ShoppingCartOutlinedIcon />
+                                    <div>
+                                        <ShoppingCartOutlinedIcon />
+                                    </div>
                                 </div>
                             </IconButton>
-
                         </Tooltip>
                         <Menu
                             sx={{ mt: '45px' }}
@@ -204,25 +155,89 @@ export default function Navbar() {
                         >
 
                             <MenuItem onClick={handleCloseUserMenu}>
-                                <Typography textAlign="center">
-                                    {products.length > 0 ? <Cart /> : <span className="cartEmpty">Cart empty</span>}
-                                </Typography>
+                                <Typography textAlign="center">something</Typography>
                             </MenuItem>
                         </Menu>
-                        {products.length > 0 && <span style={{
-                            backgroundColor: '#2879fe',
-                            padding: '2px 8px',
-                            fontWeight: 'bold',
-                            color: 'white',
-                            borderRadius: '100%',
-                            position: 'relative',
-                            left: '-15px',
-                            top: '-5px',
-                            fontSize: '13px'
-                        }}>{products.length}</span>}
                     </Box>
                 </Toolbar>
             </Container>
         </AppBar>
     );
 }
+
+
+
+// import { useState } from 'react';
+// import { Link } from 'react-router-dom';
+// import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+// import SearchIcon from '@mui/icons-material/Search';
+// import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
+// import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+// import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+// import Cart from '../Cart/Cart';
+// import "./Navbar.scss";
+// import { useSelector } from 'react-redux';
+
+// export default function Navbar() {
+
+//     const products = useSelector((state) => state.cart.products)
+
+//     const [open, setOpen] = useState(false)
+
+//     return (
+//         <div className="navbar">
+//             <div className="wrapper">
+//                 <div className="left">
+//                     <div className="item">
+//                         <img src="/img/en.png" />
+//                         <KeyboardArrowDownIcon />
+//                     </div>
+//                     <div className="item">
+//                         <span>USD</span>
+//                         <KeyboardArrowDownIcon />
+//                     </div>
+//                     <div className="item">
+//                         <Link className="link" to="/products/1">Women</Link>
+//                     </div>
+//                     <div className="item">
+//                         <Link className="link" to="/products/2">Men</Link>
+//                     </div>
+//                     <div className="item">
+//                         <Link className="link" to="/products/3">Children</Link>
+//                     </div>
+//                 </div>
+//                 <div className="center">
+//                     <Link className="link" to="/">
+//                         <img src="/icon.png" width="25px" style={{marginRight: '6px', marginBottom: '-5px'}} />
+//                         CRYSTALS
+//                         </Link>
+//                 </div>
+//                 <div className="right">
+//                       <div className="item">
+//                         <Link className="link" to="https://github.com/fifolio" target='_blank'>Github</Link>
+//                     </div>
+//                     <div className="item">
+//                         <Link className="link" to="/">About</Link>
+//                     </div>
+//                     <div className="item">
+//                         <Link className="link" to="/">Contact</Link>
+//                     </div>
+//                     <div className="item">
+//                         <Link className="link" to="/">Stores</Link>
+//                     </div>
+//                     <div className="icons">
+//                         <SearchIcon />
+//                         <PersonOutlineIcon />
+//                         <FavoriteBorderIcon />
+//                         <div className="cartIcon" onClick={() => setOpen(!open)}>
+//                         <ShoppingCartOutlinedIcon />
+//                         <span>{products.length}</span>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+
+//             {open && <Cart />}
+//         </div>
+//     )
+// }

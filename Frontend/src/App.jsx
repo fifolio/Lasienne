@@ -7,8 +7,9 @@ const Layout = () => {
   return (
     <div className="app">
       <Navbar />
-      <Outlet />
-      <Footer />
+      <div className="div" style={{marginTop: '45px'}}></div>
+      {/* <Outlet /> */}
+      {/* <Footer /> */}
     </div>
   )
 }
