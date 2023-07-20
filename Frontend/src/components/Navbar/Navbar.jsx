@@ -14,9 +14,8 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-
-import './Navbar.scss'
 import Cart from '../Cart/Cart';
+import './Navbar.scss'
 
 export default function Navbar() {
 
@@ -41,9 +40,9 @@ export default function Navbar() {
     };
 
     return (
-        <AppBar position="fixed" style={{ background: 'white', color: 'black'}}>
+        <AppBar position="fixed" style={{ background: 'white', color: 'black' }}>
             <Container maxWidth="lg">
-                <Toolbar style={{minHeight: '50px'}}>
+                <Toolbar style={{ minHeight: '50px' }}>
                     <Typography
                         noWrap
                         component="a"
@@ -187,7 +186,11 @@ export default function Navbar() {
 
                         </Tooltip>
                         <Menu
-                            sx={{ mt: '45px' }}
+                        className="menuItemCart"
+                            style={{
+                                marginTop: '40px',
+
+                            }}
                             id="menu-appbar"
                             anchorEl={anchorElUser}
                             anchorOrigin={{
@@ -203,11 +206,14 @@ export default function Navbar() {
                             onClose={handleCloseUserMenu}
                         >
 
-                            <MenuItem onClick={handleCloseUserMenu}>
-                                <Typography textAlign="center">
-                                    {products.length > 0 ? <Cart /> : <span className="cartEmpty">Cart empty</span>}
-                                </Typography>
+                            <MenuItem sx={{
+                                padding: 0
+                            }}>
+
+                                {products.length ? <Cart /> : <span className="cartEmpty">Cart empty</span>}
                             </MenuItem>
+
+
                         </Menu>
                         {products.length > 0 && <span style={{
                             backgroundColor: '#2879fe',
