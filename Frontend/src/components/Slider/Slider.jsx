@@ -1,22 +1,43 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import EastOutlinedIcon from "@mui/icons-material/EastOutlined";
 import WestOutlined from "@mui/icons-material/WestOutlined";
 import "./Slider.scss";
+import axios from "axios";
 
 
 export default function Slider() {
 
     const [currentSlide, setCurrentSlide] = useState(0);
 
-    const data = [
-        "https://images.unsplash.com/photo-1583039949243-e4119fa27a7d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80",
-        "https://images.unsplash.com/photo-1549439602-43ebca2327af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-        "https://images.unsplash.com/photo-1590739241856-cc8c15419fc5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1409&q=80",
-        "https://images.unsplash.com/photo-1597225244660-1cd128c64284?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-        "https://images.unsplash.com/flagged/photo-1553802922-2eb2f7f2c65b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-        "https://images.unsplash.com/photo-1472806426350-603610d85659?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-        "https://images.unsplash.com/photo-1508427953056-b00b8d78ebf5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-    ];
+    const [photos, setPhotos] = useState([]);
+
+    const fetchRandomPhotos = async () => {
+
+        try {
+            const accessKey = "Ny605zUXYY14kJF1EywrvXh82Us6NSLtz1zOluMS4Yc";
+            const url = "https://api.unsplash.com/photos/random";
+            const query = "fashion,beauty,style,jewelry,makeup";
+            const res = await axios.get(url, {
+                params: {
+                    query,
+                    count: 11,
+                    client_id: accessKey,
+                    orientation: 'landscape',
+                },
+            });
+
+            setPhotos(res.data)
+
+        } catch (err) {
+            console.log("Error fetching photos:", err)
+        }
+
+        console.log(photos)
+    }
+
+    useEffect(() => {
+        fetchRandomPhotos()
+    }, []);
 
     const prevSlide = () => {
         setCurrentSlide(currentSlide === 0 ? 4 : currentSlide - 1);
@@ -26,20 +47,28 @@ export default function Slider() {
         setCurrentSlide(currentSlide === 4 ? 0 : currentSlide + 1);
     };
 
-    // setInterval(() => {
-    //     nextSlide()
-    // }, 5500);
-
     return (
         <div className="slider">
+
+
+                <div className="banner">
+                    <h1>
+                        Crystal Marketplace
+                    </h1>
+                    <p>
+                        Beyond Classic
+                    </p>
+                </div>
             <div className="container" style={{ transform: `translateX(-${currentSlide * 100}vw)` }}>
 
-                {data?.map((img, index) => {
+                {photos?.map((photo) => {
                     return (
-                        <img key={index} src={img} />
+                        <img key={photo.id} src={photo.urls.regular} alt={photo.description} />
                     )
                 })}
             </div>
+
+
 
             <div className="icons">
                 <div className="icon" onClick={prevSlide}>
@@ -49,6 +78,7 @@ export default function Slider() {
                     <EastOutlinedIcon />
                 </div>
             </div>
+
         </div>
     )
 }

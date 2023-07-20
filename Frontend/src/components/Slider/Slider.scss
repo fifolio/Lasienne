@@ -1,18 +1,18 @@
-.slider{
+.slider {
     height: calc(110vh - 80px);
     width: 100%;
     position: relative;
     overflow: hidden;
-    
-    .container{
+
+    .container {
         width: 300vw;
         height: 100%;
         display: flex;
         transition: all 1.5s ease;
         transform: translateX(-600vw);
-        
-        
-        img{
+
+
+        img {
             width: 100vw;
             height: 100vh;
             object-fit: cover;
@@ -21,7 +21,7 @@
         }
     }
 
-    .icons{
+    .icons {
         width: fit-content;
         display: flex;
         position: absolute;
@@ -31,7 +31,7 @@
         gap: 10px;
         margin: auto;
 
-        .icon{
+        .icon {
             background: white;
             width: 50px;
             height: 50px;
@@ -42,5 +42,39 @@
             align-items: center;
             justify-content: center;
         }
+    }
+
+}
+
+.banner {
+    background-color: transparent;
+    text-shadow: 0 0 0 #999;
+    width: 100vw;
+    height: 75vh;
+    position: fixed;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+
+    h1 {
+        text-shadow: 2px 1px 4px rgba(0, 0, 0, 0.809);
+        color: white;
+        font-size: 70px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        color: #ffffff;
+        font-size: 25px;
+        background-color: rgb(0, 0, 0);
+        border-top-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+        padding: 10px 20px;
+
     }
 }

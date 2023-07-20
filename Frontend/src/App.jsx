@@ -1,14 +1,14 @@
-import { createBrowserRouter, RouterProvider, Outlet} from 'react-router-dom'; 
+import { createBrowserRouter, Outlet, RouterProvider} from 'react-router-dom'; 
 import {HomePage, ProductPage, ProductsPage} from './pages'
-import { Navbar, Footer } from './components';
+import { Navbar } from './components';
 import "./App.scss"
 
 const Layout = () => {
   return (
     <div className="app">
       <Navbar />
-      <div className="div" style={{marginTop: '45px'}}></div>
-      {/* <Outlet /> */}
+      <div className="div" style={{marginTop: '40px'}}></div>
+      <Outlet />
       {/* <Footer /> */}
     </div>
   )

@@ -43,7 +43,7 @@ export default function Navbar() {
     return (
         <AppBar position="fixed" style={{ background: 'white', color: 'black'}}>
             <Container maxWidth="lg">
-                <Toolbar style={{'min-height': '50px'}}>
+                <Toolbar style={{minHeight: '50px'}}>
                     <Typography
                         noWrap
                         component="a"
