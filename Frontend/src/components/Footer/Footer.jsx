@@ -11,7 +11,7 @@ export default function Footer() {
 
         <Box sx={{ flexGrow: 1 }} className="footer">
             <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} className="top">
-                <Grid item hide className="item">
+                <Grid item className="item">
                     <h1>Categories</h1>
                     <Link to="/products/1" style={{textDecoration: 'none', color: '#555'}}>Clothing</Link>
                     <Link to="/products/2" style={{textDecoration: 'none', color: '#555'}}>Dresses</Link>

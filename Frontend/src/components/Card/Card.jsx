@@ -1,15 +1,19 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { Link } from 'react-router-dom'
+
+
 import "./Card.scss";
 
 export default function Card({ item }) {
 
 
     return (
+
         <Link className='link' to={`/product/${item?.id}`}>
             <div className="card">
                 <div className="image">
-                    {item?.attributes.isNew && <span>New Season</span>}
+                    {item?.attributes.isNew && <span>⭐ New Season</span>}
                     <img src={import.meta.env.VITE_BASE_URL + item.attributes?.img?.data.attributes.url} className='mainImg' />
                     <img src={import.meta.env.VITE_BASE_URL + item.attributes?.img2?.data.attributes.url} className='secondImg' />
                 </div>
@@ -20,5 +24,6 @@ export default function Card({ item }) {
                 </div>
             </div>
         </Link>
+
     )
 }

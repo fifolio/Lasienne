@@ -4,6 +4,8 @@
 import Card from "../Card/Card";
 import "./FeaturedProducts.scss";
 import useFetch from '../hooks/useFetch';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
 
 export default function FeaturedProducts({ type }) {
 
@@ -17,17 +19,25 @@ export default function FeaturedProducts({ type }) {
                 <h1>
                     {type} products
                 </h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam excepturi libero voluptas? Aperiam, ipsum porro delectus nihil voluptatum molestias quos.
-                </p>
             </div>
-            <div className="bottom">
-                {error
-                    ? "Something went wrong!"
-                    : loading
-                        ? "loading"
-                        : data?.map((item) => <Card item={item} key={item.id} />)}
-            </div>
+            <Box sx={{ flexGrow: 1 }}>
+                <div>
+                    <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+                        {error
+                            ? "Something went wrong!"
+                            : loading
+                                ? "loading"
+                                : data?.map((item) => (
+                                    <>
+                                        <Grid item className="productItem">
+                                            <Card item={item} key={item.id} />
+                                        </Grid>
+                                    </>
+                                ))}
+                    </Grid>
+                </div>
+            </Box>
         </div>
+
     )
 }
