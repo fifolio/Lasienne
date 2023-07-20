@@ -1,9 +1,8 @@
 .products {
     padding: 30px 50px;
-    display: flex;
 
     .left{
-        flex: 1;
+        display: none;
         position: sticky;
         height: 100%;
         top: 50px;
@@ -11,6 +10,7 @@
 
     .filterItem{
         margin-bottom: 30px;
+        
 
         h2{
             font-weight: 500;
@@ -27,9 +27,6 @@
         }
     }
 
-    .right{
-        flex: 3;
-    }
 
     .catImg{
         width: 100%;
@@ -37,4 +34,33 @@
         object-fit: cover;
         margin-bottom: 50px;
     }
+
+
+    .filterBtn{
+        margin: 0;
+        padding: 0;
+        z-index: 2;
+        right: 50px;
+        bottom: 50px;
+        position: fixed;
+        display: flex;
+
+        justify-content: end;
+        align-items:flex-end;
+        
+        
+        button {
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.749);
+            background-color: #2879fe;
+
+        }
+    }
+
+}
+
+.filterByPriceSpan{
+    font-weight: bold;
+    color: green;
+    margin-top: -23px;
+
 }
