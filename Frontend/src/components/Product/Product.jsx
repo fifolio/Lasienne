@@ -18,8 +18,6 @@ export default function Product() {
     const [quantity, setQuantity] = useState(1);
     const { data, loading, error } = useFetch(`/products/${id}?populate=*`);
 
-    console.log(data?.attributes.img?.data?.attributes?.url)
-
     const dispatch = useDispatch()
 
     return (
