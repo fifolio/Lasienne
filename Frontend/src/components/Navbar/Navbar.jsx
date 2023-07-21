@@ -161,7 +161,7 @@ export default function Navbar() {
                             </Link>
                         </Button>
                         <Button sx={{ color: 'black', display: 'block' }}>
-                            <Link to="https://github.com/fifolio/La Sienne" target="_blank" className="github" style={{ textDecoration: 'none', color: 'black' }}>
+                            <Link to="https://github.com/fifolio/Lasienne" target="_blank" className="github" style={{ textDecoration: 'none', color: 'black' }}>
                                 <GitHubIcon style={{ width: '19px', marginRight: '5px', marginTop: '-3px' }} />
                                 Github
                             </Link>
