@@ -18,6 +18,8 @@ export default function Product() {
     const [quantity, setQuantity] = useState(1);
     const { data, loading, error } = useFetch(`/products/${id}?populate=*`);
 
+    console.log(data?.attributes.img?.data?.attributes?.url)
+
     const dispatch = useDispatch()
 
     return (
@@ -30,12 +32,12 @@ export default function Product() {
                             <Grid item xs={12} sm={12} md={7}>
                                 <div className="left">
                                     <div className="images">
-                                        <img src={data.attributes?.img?.data.attributes.url} onClick={() => setSelectedImg("img")} />
-                                        <img src={data.attributes?.img2?.data.attributes.url} onClick={() => setSelectedImg("img2")} />
+                                        <img src={import.meta.env.VITE_BASE_URL + data?.attributes.img?.data?.attributes?.url} onClick={() => setSelectedImg("img")} />
+                                        <img src={import.meta.env.VITE_BASE_URL + data?.attributes.img2?.data?.attributes?.url} onClick={() => setSelectedImg("img2")} />
 
                                     </div>
                                     <div className="mainImg">
-                                        <img src={data?.attributes[selectedImg]?.data?.attributes?.url} />
+                                        <img src={import.meta.env.VITE_BASE_URL + data?.attributes[selectedImg]?.data?.attributes?.url} />
                                     </div>
                                 </div>
                             </Grid>
