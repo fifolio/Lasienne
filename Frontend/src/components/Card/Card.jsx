@@ -19,8 +19,8 @@ export default function Card({ item }) {
             <div className="card">
                 <div className="image">
                     {item?.attributes.isNew && <span>⭐ New Season</span>}
-                    <img src={"https://lasienne-backend.onrender.com" + item.attributes?.img?.data.attributes.url} className='mainImg' />
-                    <img src={"https://lasienne-backend.onrender.com" + item.attributes?.img2?.data.attributes.url} className='secondImg' />
+                    <img src={`https://lasienne-backend.onrender.com/api/products/"${item.attributes?.img?.data.attributes.url}`} className='mainImg' />
+                    <img src={`https://lasienne-backend.onrender.com/api/products/"${item.attributes?.img2?.data.attributes.url}`} className='secondImg' />
                 </div>
                 <h2>{item?.attributes.title}</h2>
                 <div className='prices'>
