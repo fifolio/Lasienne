@@ -31,7 +31,7 @@ export default function Product() {
                                 <div className="left">
                                     <div className="images">
                                         <img src={item.attributes?.img?.data.attributes.url} onClick={() => setSelectedImg("img")} />
-                                        <img src={item.attributes?.img?.data.attributes.url} onClick={() => setSelectedImg("img2")} />
+                                        <img src={item.attributes?.img2?.data.attributes.url} onClick={() => setSelectedImg("img2")} />
 
                                     </div>
                                     <div className="mainImg">
