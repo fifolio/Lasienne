@@ -6,13 +6,13 @@ import "./List.scss";
 
 export default function List({ catId, subCats, maxPrice, sort }) {
 
-    const { data, loading, error } = useFetch(`/products?populate=*&[filters][categories][id]=${catId}}
+    const { data, loading, error } = useFetch(`/products?populate=*&[filters][categories][id]=${catId}${subCats.map((item) => `&[filters][sub_categories][id][$eq]=${item}`)}
     `);
 
     // &[filters][categories][id]=${catId}${subCats.map((item) => `&[filters][sub_categories][id][$eq]=${item}`)}
     // &[filters][price][$lte]=${maxPrice}&sort=price:${sort ? sort : 'desc'
 
-    console.log(data)
+    console.log(1, data)
 
 
     return (
