@@ -10,7 +10,8 @@ export default function Card({ item }) {
     const scrollUp = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
-    
+
+    console.log(item.attributes.data.attributes.url)
     console.log('First image URL:', import.meta.env.VITE_BASE_URL + item.attributes?.img?.data.attributes.url);
     console.log('Second image URL:', import.meta.env.VITE_BASE_URL + item.attributes?.img2?.data.attributes.url);
     
