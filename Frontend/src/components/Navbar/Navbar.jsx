@@ -117,7 +117,7 @@ export default function Navbar() {
                             </MenuItem>
                             <MenuItem onClick={handleCloseNavMenu} style={{ margin: '5px 0 5px 0' }}>
                                 <Typography className="nav-link">
-                                    <Link to="https://github.com/fifolio/La Sienne" target="_blank" className="github" style={{ textDecoration: 'none', color: 'white', backgroundColor: 'black', padding: '10px', borderRadius: '5px' }}>
+                                    <Link to="https://github.com/fifolio/Lasienne" target="_blank" className="github" style={{ textDecoration: 'none', color: 'white', backgroundColor: 'black', padding: '10px', borderRadius: '5px' }}>
                                         Github
                                     </Link>
                                 </Typography>
