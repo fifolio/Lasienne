@@ -11,6 +11,9 @@ export default function List({ catId, subCats, maxPrice, sort }) {
     `);
 
 
+    console.log(data)
+
+
     return (
         <div className="list">
             {loading ?
