@@ -30,8 +30,8 @@ export default function Product() {
                             <Grid item xs={12} sm={12} md={7}>
                                 <div className="left">
                                     <div className="images">
-                                        <img src={item.attributes?.img?.data.attributes.url} onClick={() => setSelectedImg("img")} />
-                                        <img src={item.attributes?.img2?.data.attributes.url} onClick={() => setSelectedImg("img2")} />
+                                        <img src={data.attributes?.img?.data.attributes.url} onClick={() => setSelectedImg("img")} />
+                                        <img src={data.attributes?.img2?.data.attributes.url} onClick={() => setSelectedImg("img2")} />
 
                                     </div>
                                     <div className="mainImg">
