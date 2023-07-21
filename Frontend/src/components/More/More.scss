@@ -1,0 +1,32 @@
+.more{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    
+    .top{
+        row-gap: 10px;
+        margin-bottom: 50px;
+        text-transform: capitalize;
+
+        h1{
+            margin-top: 40px;
+            font-size: xx-large;
+        }
+
+    }
+
+.moreItem{
+    margin: auto;
+    margin-top: 0;
+    padding: 0;
+}
+
+    // .bottom {
+    //     display: flex;
+    //     justify-content: center;
+    //     width: 100%;
+    //     gap: 25px;
+    // }
+}

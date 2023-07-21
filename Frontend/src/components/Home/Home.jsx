@@ -1,3 +1,4 @@
+import { More } from "..";
 import FeaturedProducts from "../FeaturedProducts/FeaturedProducts";
 import Slider from "../Slider/Slider";
 
@@ -7,6 +8,7 @@ export default function Home() {
             <Slider />
             <FeaturedProducts type="featured" />
             <FeaturedProducts type="trending" />
+            <More />
         </div>
     )
 }

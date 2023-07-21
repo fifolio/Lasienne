@@ -2,20 +2,20 @@
 import Card from "../Card/Card";
 import useFetch from '../hooks/useFetch';
 import Grid from '@mui/material/Grid';
-import "./FeaturedProducts.scss";
+import './More.scss';
 import { Loading } from "..";
 
-export default function FeaturedProducts({ type }) {
+export default function MoreProducts() {
 
-    const { data, loading, error } = useFetch(`/products?populate=*&[filters][type][$eq]=${type}`);
+    const { data, loading, error } = useFetch(`/products?populate=*&[filters][type][$eq]=normal`);
 
     console.log(data, loading, error)
 
     return (
-        <div className='featuredProducts'>
+        <div className='more'>
             <div className="top">
                 <h1>
-                    {type} products
+                    Discover More
                 </h1>
             </div>
 
@@ -28,7 +28,7 @@ export default function FeaturedProducts({ type }) {
                                 ? <Loading />
                                 : data?.map((item) => (
                                     <>
-                                        <Grid item className="productItem">
+                                        <Grid item className="moreItem">
                                             <Card item={item} key={item.id} />
                                         </Grid>
                                     </>
