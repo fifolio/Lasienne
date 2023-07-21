@@ -7,10 +7,13 @@ import "./Card.scss";
 
 export default function Card({ item }) {
 
+    const scrollUp = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
 
     return (
 
-        <Link className='link' to={`/product/${item?.id}`}>
+        <Link className='link' to={`/product/${item?.id}`} onClick={scrollUp}>
             <div className="card">
                 <div className="image">
                     {item?.attributes.isNew && <span>⭐ New Season</span>}

@@ -31,8 +31,6 @@ export default function Slider() {
         } catch (err) {
             console.log("Error fetching photos:", err)
         }
-
-        console.log(photos)
     }
 
     useEffect(() => {

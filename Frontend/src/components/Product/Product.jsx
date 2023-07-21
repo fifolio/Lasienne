@@ -9,7 +9,7 @@ import "./Product.scss";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/cartReducer";
 import { Grid } from "@mui/material";
-import { Loading } from "..";
+import { Loading, More } from "..";
 
 export default function Product() {
 
@@ -39,7 +39,7 @@ export default function Product() {
                                     </div>
                                 </div>
                             </Grid>
-                            <Grid item  xs={12} sm={12} md={5}>
+                            <Grid item xs={12} sm={12} md={5}>
                                 <div className="right">
                                     <h1>{data?.attributes?.title}</h1>
                                     <span className="price">${data?.attributes?.price}</span>
@@ -91,7 +91,11 @@ export default function Product() {
                         </>
                     }
                 </Grid>
+                <Grid item xs={12} sm={12} md={12}>
+                    <More/>
+                </Grid>
             </Grid>
+
         </div>
     )
 }

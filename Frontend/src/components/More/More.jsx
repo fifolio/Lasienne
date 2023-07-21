@@ -8,9 +8,6 @@ import { Loading } from "..";
 export default function MoreProducts() {
 
     const { data, loading, error } = useFetch(`/products?populate=*&[filters][type][$eq]=normal`);
-
-    console.log(data, loading, error)
-
     return (
         <div className='more'>
             <div className="top">

@@ -19,6 +19,10 @@ import './Navbar.scss'
 
 export default function Navbar() {
 
+    const scrollUp = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
     const products = useSelector((state) => state.cart.products)
 
     const [anchorElNav, setAnchorElNav] = useState(null);
@@ -92,28 +96,21 @@ export default function Navbar() {
 
                             <MenuItem onClick={handleCloseNavMenu}>
                                 <Typography className="nav-link">
-                                    <Link to="/products/1" style={{ textDecoration: 'none', color: 'black' }}>
+                                    <Link to="/products/1" style={{ textDecoration: 'none', color: 'black' }} onClick={scrollUp}>
                                         Clothing
                                     </Link>
                                 </Typography>
                             </MenuItem>
                             <MenuItem onClick={handleCloseNavMenu}>
                                 <Typography className="nav-link">
-                                    <Link to="/products/2" style={{ textDecoration: 'none', color: 'black' }}>
+                                    <Link to="/products/2" style={{ textDecoration: 'none', color: 'black' }} onClick={scrollUp}>
                                         Dresses
                                     </Link>
                                 </Typography>
                             </MenuItem>
-                            {/* <MenuItem onClick={handleCloseNavMenu}>
-                                <Typography className="nav-link">
-                                    <Link to="/products/4" style={{ textDecoration: 'none', color: 'black' }}>
-                                        Sports
-                                    </Link>
-                                </Typography>
-                            </MenuItem> */}
                             <MenuItem onClick={handleCloseNavMenu}>
                                 <Typography className="nav-link">
-                                    <Link to="/products/5" style={{ textDecoration: 'none', color: 'black' }}>
+                                    <Link to="/products/5" style={{ textDecoration: 'none', color: 'black' }} onClick={scrollUp}>
                                     Shoes
                                     </Link>
                                 </Typography>
@@ -148,23 +145,18 @@ export default function Navbar() {
                     </Typography>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }} className="main-nav-links">
-                        <Button sx={{ color: 'black', display: 'block' }} className="nav-link">
+                        <Button sx={{ color: 'black', display: 'block' }} className="nav-link" onClick={scrollUp}>
                             <Link to="/products/1" style={{ textDecoration: 'none', color: 'black' }}>
                                 Clothing
                             </Link>
                         </Button>
                         <Button sx={{ color: 'black', display: 'block' }} className="nav-link">
-                            <Link to="/products/2" style={{ textDecoration: 'none', color: 'black' }}>
+                            <Link to="/products/2" style={{ textDecoration: 'none', color: 'black' }} onClick={scrollUp}>
                                 Dresses
                             </Link>
                         </Button>
-                        {/* <Button sx={{ color: 'black', display: 'block' }} className="nav-link">
-                            <Link to="/products/3" style={{ textDecoration: 'none', color: 'black' }}>
-                                Sports
-                            </Link>
-                        </Button> */}
                         <Button sx={{ color: 'black', display: 'block' }} className="nav-link">
-                            <Link to="/products/5" style={{ textDecoration: 'none', color: 'black' }}>
+                            <Link to="/products/5" style={{ textDecoration: 'none', color: 'black' }} onClick={scrollUp}>
                             Shoes
                             </Link>
                         </Button>
