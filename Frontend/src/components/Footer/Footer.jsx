@@ -15,8 +15,7 @@ export default function Footer() {
                     <h1>Categories</h1>
                     <Link to="/products/1" style={{textDecoration: 'none', color: '#555'}}>Clothing</Link>
                     <Link to="/products/2" style={{textDecoration: 'none', color: '#555'}}>Dresses</Link>
-                    <Link to="/products/3" style={{textDecoration: 'none', color: '#555'}}>Sports</Link>
-                    <Link to="/products/4" style={{textDecoration: 'none', color: '#555'}}>Accessories</Link>
+                    <Link to="/products/5" style={{textDecoration: 'none', color: '#555'}}>Sports</Link>
                 </Grid>
                 <Grid item className="item">
                     <h1>More</h1>
@@ -33,7 +32,7 @@ export default function Footer() {
                 <Grid item className="item">
                     <span className="logo">
                         <img src="/icon.png" width="20px" style={{ marginRight: '6px', marginBottom: '-3px' }} />
-                        Crystals
+                        La Sienne
                     </span>
                     <span className="copyright">&copy; {new Date().getFullYear()} <a href="https://github.com/fifolio" target="_blank">fifolio</a></span>
                     <div style={{marginTop: '30px'}}>

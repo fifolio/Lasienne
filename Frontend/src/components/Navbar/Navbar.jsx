@@ -61,7 +61,7 @@ export default function Navbar() {
                             textDecoration: 'none',
                         }}
                     >
-                        CRYSTALS
+                        La Sienne
                     </Typography>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -117,7 +117,7 @@ export default function Navbar() {
                             </MenuItem>
                             <MenuItem onClick={handleCloseNavMenu} style={{ margin: '5px 0 5px 0' }}>
                                 <Typography className="nav-link">
-                                    <Link to="https://github.com/fifolio/Crystals" target="_blank" className="github" style={{ textDecoration: 'none', color: 'white', backgroundColor: 'black', padding: '10px', borderRadius: '5px' }}>
+                                    <Link to="https://github.com/fifolio/La Sienne" target="_blank" className="github" style={{ textDecoration: 'none', color: 'white', backgroundColor: 'black', padding: '10px', borderRadius: '5px' }}>
                                         Github
                                     </Link>
                                 </Typography>
@@ -141,7 +141,7 @@ export default function Navbar() {
                             textDecoration: 'none',
                         }}
                     >
-                        CRYSTALS
+                        La Sienne
                     </Typography>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }} className="main-nav-links">
@@ -161,7 +161,7 @@ export default function Navbar() {
                             </Link>
                         </Button>
                         <Button sx={{ color: 'black', display: 'block' }}>
-                            <Link to="https://github.com/fifolio/Crystals" target="_blank" className="github" style={{ textDecoration: 'none', color: 'black' }}>
+                            <Link to="https://github.com/fifolio/La Sienne" target="_blank" className="github" style={{ textDecoration: 'none', color: 'black' }}>
                                 <GitHubIcon style={{ width: '19px', marginRight: '5px', marginTop: '-3px' }} />
                                 Github
                             </Link>
