@@ -7,6 +7,8 @@ import "./Card.scss";
 
 export default function Card({ item }) {
 
+    console.log(item)
+
     const scrollUp = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
