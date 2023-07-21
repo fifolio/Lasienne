@@ -9,6 +9,7 @@ import "./Product.scss";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/cartReducer";
 import { Grid } from "@mui/material";
+import { Loading } from "..";
 
 export default function Product() {
 
@@ -24,7 +25,7 @@ export default function Product() {
             <Grid sx={{ flexGrow: 1 }}>
                 <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                     {loading ?
-                        "loading" :
+                        <Loading /> :
                         <>
                             <Grid item xs={12} sm={12} md={7}>
                                 <div className="left">

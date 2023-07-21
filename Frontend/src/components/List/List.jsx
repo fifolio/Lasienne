@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import { Card } from '..'
+import { Card, Loading } from '..'
 import useFetch from "../hooks/useFetch";
 import "./List.scss";
 
@@ -14,7 +14,7 @@ export default function List({ catId, subCats, maxPrice, sort }) {
     return (
         <div className="list">
             {loading ?
-                "loading" : 
+                <Loading /> : 
                 data?.map((item, index) => (
                     <Card key={index} item={item} />
                 ))}

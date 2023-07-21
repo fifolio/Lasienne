@@ -104,17 +104,17 @@ export default function Navbar() {
                                     </Link>
                                 </Typography>
                             </MenuItem>
-                            <MenuItem onClick={handleCloseNavMenu}>
+                            {/* <MenuItem onClick={handleCloseNavMenu}>
                                 <Typography className="nav-link">
-                                    <Link to="/products/3" style={{ textDecoration: 'none', color: 'black' }}>
+                                    <Link to="/products/4" style={{ textDecoration: 'none', color: 'black' }}>
                                         Sports
                                     </Link>
                                 </Typography>
-                            </MenuItem>
+                            </MenuItem> */}
                             <MenuItem onClick={handleCloseNavMenu}>
                                 <Typography className="nav-link">
-                                    <Link to="/products/4" style={{ textDecoration: 'none', color: 'black' }}>
-                                        Accessories
+                                    <Link to="/products/5" style={{ textDecoration: 'none', color: 'black' }}>
+                                    Shoes
                                     </Link>
                                 </Typography>
                             </MenuItem>
@@ -158,14 +158,14 @@ export default function Navbar() {
                                 Dresses
                             </Link>
                         </Button>
-                        <Button sx={{ color: 'black', display: 'block' }} className="nav-link">
+                        {/* <Button sx={{ color: 'black', display: 'block' }} className="nav-link">
                             <Link to="/products/3" style={{ textDecoration: 'none', color: 'black' }}>
                                 Sports
                             </Link>
-                        </Button>
+                        </Button> */}
                         <Button sx={{ color: 'black', display: 'block' }} className="nav-link">
-                            <Link to="/products/4" style={{ textDecoration: 'none', color: 'black' }}>
-                                Accessories
+                            <Link to="/products/5" style={{ textDecoration: 'none', color: 'black' }}>
+                            Shoes
                             </Link>
                         </Button>
                         <Button sx={{ color: 'black', display: 'block' }}>

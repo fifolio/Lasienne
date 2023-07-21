@@ -4,6 +4,7 @@ import useFetch from '../hooks/useFetch';
 // import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import "./FeaturedProducts.scss";
+import { Loading } from "..";
 
 export default function FeaturedProducts({ type }) {
 
@@ -25,7 +26,7 @@ export default function FeaturedProducts({ type }) {
                         {error
                             ? "Something went wrong!"
                             : loading
-                                ? "loading"
+                                ? <Loading />
                                 : data?.map((item) => (
                                     <>
                                         <Grid item className="productItem">
