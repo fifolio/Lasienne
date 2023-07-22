@@ -110,7 +110,7 @@ export default function Navbar() {
                             </MenuItem>
                             <MenuItem onClick={handleCloseNavMenu}>
                                 <Typography className="nav-link">
-                                    <Link to="/products/5" style={{ textDecoration: 'none', color: 'black' }} onClick={scrollUp}>
+                                    <Link to="/products/3" style={{ textDecoration: 'none', color: 'black' }} onClick={scrollUp}>
                                     Shoes
                                     </Link>
                                 </Typography>
@@ -156,7 +156,7 @@ export default function Navbar() {
                             </Link>
                         </Button>
                         <Button sx={{ color: 'black', display: 'block' }} className="nav-link">
-                            <Link to="/products/5" style={{ textDecoration: 'none', color: 'black' }} onClick={scrollUp}>
+                            <Link to="/products/3" style={{ textDecoration: 'none', color: 'black' }} onClick={scrollUp}>
                             Shoes
                             </Link>
                         </Button>
