@@ -2,11 +2,13 @@
 <p class="has-line-data" data-line-start="3" data-line-end="4"><img width="100%" height="100%" src="https://raw.githubusercontent.com/fifolio/Lasienne/main/Frontend/public/snap.PNG" alt="N|Solid"></p>
 
 <p class="has-line-data" data-line-start="5" data-line-end="6">
-  Asteroid is a captivating and knowledge-rich platform that orbits around the celestial wonders of Space and Astronomy. Within these virtual pages, a stellar collection of articles and blogs awaits, each crafted by the extraordinary artificial intelligence known as ChatGPT. As your cosmic guide, ChatGPT, powered by OpenAI, delves into the depths of the universe, delivering captivating insights and igniting your curiosity.
+
+"La Sienne" - Where Fashion Finds its True Expression!
+
+Step into a world of style and elegance with "La Sienne," the ultimate fashion destination that takes inspiration from the renowned SHEIN and adds its own unique flair. Embrace the beauty of individuality as you embark on a shopping journey unlike any other.
+
+
   
-  Behind the scenes, the Asteroid platform harnesses the power of Strapi as its trusty backend companion. This dynamic duo ensures a seamless and immersive experience, seamlessly curating the celestial knowledge that flows through the platform's veins. With the support of a robust SQLite database, the treasure trove of cosmic wisdom is organized and readily accessible, enabling you to embark on an enlightening journey through the stars.
-  
-  So, fasten your seatbelt, embark on this interstellar adventure, and allow the synergy of cutting-edge AI technology, the vastness of space, and the efficiency of Strapi to transport you to a realm where the mysteries of the universe are revealed in all their splendor. Explore, learn, and expand your cosmic horizons with Asteroid, where the wonders of Space and Astronomy come alive! 🌌✨🚀
 </p>
 
 <h2 class="code-line" data-line-start=7 data-line-end=8 ><a id="Installation_7"></a>Installation</h2>
