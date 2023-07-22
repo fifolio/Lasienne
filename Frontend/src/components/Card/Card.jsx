@@ -17,8 +17,8 @@ export default function Card({ item }) {
             <div className="card">
                 <div className="image">
                     {item?.attributes.isNew && <span>⭐ New Season</span>}
-                    <img src={import.meta.env.VITE_BASE_URL + item.attributes?.img?.data.attributes.url} className='mainImg' />
-                    <img src={import.meta.env.VITE_BASE_URL + item.attributes?.img2?.data.attributes.url} className='secondImg' />
+                    <img src={item.attributes?.img?.data.attributes.url} className='mainImg' />
+                    <img src={item.attributes?.img2?.data.attributes.url} className='secondImg' />
                 </div>
                 <h2>{item?.attributes.title}</h2>
                 <div className='prices'>

@@ -20,7 +20,7 @@ export default function Cart() {
             <h1>Products in your cart</h1>
             {products?.map((item) => (
                 <div className="item" key={item.id}>
-                    <img src={import.meta.env.VITE_BASE_URL + item.img}/>
+                    <img src={item.img}/>
                     <div className="details">
                         <h1>{item.title}</h1>
                         <p>{item.desc?.substring(0, 25)}...</p>
