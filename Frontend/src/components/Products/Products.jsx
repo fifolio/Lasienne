@@ -6,7 +6,6 @@ import "./Products.scss";
 import useFetch from '../hooks/useFetch';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
 

@@ -11,6 +11,7 @@ export default function Card({ item }) {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
+  
     return (
 
         <Link className='link' to={`/product/${item?.id}`} onClick={scrollUp}>
