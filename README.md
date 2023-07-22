@@ -1,5 +1,5 @@
 
-<p class="has-line-data" data-line-start="3" data-line-end="4"><img width="100%" height="100%" src="https://ibb.co/PMbj3N4" alt="N|Solid"></p>
+<p class="has-line-data" data-line-start="3" data-line-end="4"><img width="100%" height="100%" src="https://raw.githubusercontent.com/fifolio/Lasienne/main/Frontend/public/snap.PNG" alt="N|Solid"></p>
 
 <p class="has-line-data" data-line-start="5" data-line-end="6">
   Asteroid is a captivating and knowledge-rich platform that orbits around the celestial wonders of Space and Astronomy. Within these virtual pages, a stellar collection of articles and blogs awaits, each crafted by the extraordinary artificial intelligence known as ChatGPT. As your cosmic guide, ChatGPT, powered by OpenAI, delves into the depths of the universe, delivering captivating insights and igniting your curiosity.
