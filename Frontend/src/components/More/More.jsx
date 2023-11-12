@@ -7,7 +7,7 @@ import { Loading } from "..";
 
 export default function MoreProducts() {
 
-    const { data, loading, error } = useFetch(`/products?populate=*&[filters][type][$eq]=normal`);
+    const { data, loading, error } = useFetch(`/products?populate=*&filters[type][$eq]=Normal`);
     return (
         <div className='more'>
             <div className="top">

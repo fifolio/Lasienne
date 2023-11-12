@@ -6,8 +6,8 @@ export default function Home() {
     return (
         <div className="home">
             <Slider />
-            <FeaturedProducts type="featured" />
-            <FeaturedProducts type="trending" />
+            <FeaturedProducts type="Featured" />
+            <FeaturedProducts type="Trending" />
             <More />
         </div>
     )

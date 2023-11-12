@@ -7,7 +7,7 @@ import { Loading } from "..";
 
 export default function FeaturedProducts({ type }) {
 
-    const { data, loading, error } = useFetch(`/products?populate=*&[filters][type][$eq]=${type}`);
+    const { data, loading, error } = useFetch(`/products?populate=*&filters[type][$eq]=${type}`);
 
     return (
         <div className='featuredProducts'>
