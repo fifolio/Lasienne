@@ -1,6 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    }
+}
+
+.countdown {
+    /* position: absolute; */
+    /* margin: 0; */
+    text-align: center;
+    padding: 10px 10px 15px 10px;
+    font-size: large;
+    color: rgb(122, 122, 122);
+    font-weight: normal;
+    z-index: 9999;
+
+}
