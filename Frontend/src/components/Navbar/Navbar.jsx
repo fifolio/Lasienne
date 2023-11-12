@@ -60,7 +60,7 @@ export default function Navbar() {
                             textDecoration: 'none',
                         }}
                     >
-                        La Sienne
+                        <a href='/' className='home-link-btn'>La Sienne</a>
                     </Typography>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -139,7 +139,7 @@ export default function Navbar() {
                             textDecoration: 'none',
                         }}
                     >
-                        La Sienne
+                        <a href='/' className='home-link-btn'>La Sienne</a>
                     </Typography>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }} className="main-nav-links">
