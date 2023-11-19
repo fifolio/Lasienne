@@ -1,5 +1,5 @@
 import { createBrowserRouter, Outlet, RouterProvider} from 'react-router-dom'; 
-import {HomePage, ProductPage, ProductsPage} from './pages'
+import {ErrorPage, HomePage, ProductPage, ProductsPage} from './pages'
 import { Navbar, Footer } from './components';
 import "./App.scss"
 
@@ -22,6 +22,10 @@ const router = createBrowserRouter([
       {
         path:"/",
         element:<HomePage />
+      },
+      {
+        path: "*",
+        element: <ErrorPage />,
       },
       {
         path:"/product/:id",

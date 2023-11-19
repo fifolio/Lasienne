@@ -10,4 +10,4 @@ export {default as List} from './List/List.jsx';
 export {default as Cart} from './Cart/Cart.jsx';
 export {default as Loading} from './Loading/Loading.jsx'
 export {default as More} from './More/More.jsx'
-
+export {default as Error} from './Error/Error.jsx'
